@@ -1,0 +1,15 @@
+
+<section class="container vx-products slider">
+  <div class="vx-sec-head"><h2>{{ component.fields.section_title.value }}</h2></div>
+  <div class="vx-slider" data-volt="slider">
+    {% for product in products.best_sellers %}
+      <a class="vx-p-card" href="{{ product.url }}">
+        <img src="{{ product.image }}" alt="{{ product.name }}">
+        <div class="vx-p-info">
+          <h3>{{ product.name }}</h3>
+          <div class="vx-price">{{ product.price_formatted }}</div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>

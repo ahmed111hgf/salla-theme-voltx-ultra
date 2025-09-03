@@ -1,0 +1,95 @@
+
+:root{--primary:#0ea5e9;--secondary:#22d3ee;--bg:#ffffff;--text:#0f172a;--muted:#64748b;--card:#f8fafc;--border:#e5e7eb}
+[data-theme="dark"]{--bg:#0b1220;--text:#e2e8f0;--card:#0f172a;--border:#1f2937}
+*{box-sizing:border-box}body{background:var(--bg);color:var(--text);margin:0;font-family:'Tajawal','Readex Pro',system-ui,sans-serif;direction:rtl}
+.container{max-width:1200px;margin:0 auto;padding:0 16px}
+.vx-btn{display:inline-block;background:var(--primary);color:#fff;padding:10px 16px;border-radius:12px;text-decoration:none;border:none;cursor:pointer}
+.vx-btn.outline{background:transparent;border:1px solid #fff;color:#fff}
+/* Topbar */
+.vx-topbar{background:linear-gradient(90deg,var(--primary),var(--secondary));color:#fff;font-size:14px}
+.vx-topbar .container{display:flex;justify-content:center;padding:6px 0}
+.vx-topbar a{color:#fff;text-decoration:none}
+/* Header */
+.vx-header{border-bottom:1px solid var(--border);position:relative;background:var(--bg)}
+.vx-header.is-sticky{position:sticky;top:0;backdrop-filter:blur(8px);z-index:50}
+.vx-header-inner{display:grid;grid-template-columns:1fr 2fr 1fr;align-items:center;gap:16px}
+.vx-left{display:flex;align-items:center;gap:10px}
+.vx-logo img{height:40px}
+.vx-search{display:flex;background:var(--card);border:1px solid var(--border);padding:6px;border-radius:12px}
+.vx-search input{background:transparent;border:none;outline:none;padding:6px 8px;width:100%}
+.vx-search button{border:none;background:var(--primary);color:#fff;border-radius:10px;padding:6px 12px}
+.vx-actions{display:flex;gap:8px;justify-content:flex-end}
+.vx-icon{border:1px solid var(--border);background:var(--card);border-radius:10px;padding:6px 8px;display:inline-flex}
+.vx-nav ul{list-style:none;display:flex;gap:16px;margin:0;padding:8px 0}
+.vx-nav a{text-decoration:none;color:var(--text);padding:8px 10px;border-radius:10px}
+.vx-nav a:hover{background:var(--card)}
+/* Hero slider */
+.vx-hero-slider{position:relative}
+.vx-slide{min-height:460px;background-image:var(--bg);background-size:cover;background-position:center;position:relative}
+.vx-overlay{position:absolute;inset:0;background:rgba(0,0,0,.30)}
+.vx-hero-inner{position:relative;z-index:2;color:#fff;padding:60px 0}
+.vx-hero-inner h1,.vx-hero-inner h2{margin:.2em 0}
+/* Sections */
+.vx-section-title{font-size:22px;margin:24px 0 12px}
+.vx-sec-head{display:flex;align-items:center;justify-content:space-between;margin:12px 0}
+/* Cards & grids */
+.vx-card{display:flex;flex-direction:column;gap:6px;text-decoration:none;color:inherit;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--card)}
+.vx-card img{width:100%;height:140px;object-fit:cover}
+.vx-p-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.vx-p-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--card);text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.vx-p-card img{width:100%;height:200px;object-fit:cover}
+.vx-p-info{padding:10px}
+.vx-price{color:var(--primary);font-weight:700}
+/* Brands */
+.vx-brands .vx-slider{display:flex;gap:16px;overflow:auto;padding-bottom:6px}
+.vx-brand{background:#fff;border:1px solid var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;width:140px;height:70px;flex:0 0 auto}
+.vx-brand img{max-width:100%;max-height:100%}
+/* Badges */
+.vx-badges-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.vx-badge{display:flex;gap:10px;align-items:center;border:1px solid var(--border);background:var(--card);border-radius:12px;padding:12px}
+/* Testimonials */
+.vx-t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.vx-t-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
+/* CTA */
+.vx-cta-inner{position:relative;min-height:220px;background-image:var(--bg);background-size:cover;background-position:center;border-radius:16px;overflow:hidden;border:1px solid var(--border)}
+.vx-cta-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,165,233,.6),rgba(34,211,238,.6))}
+.vx-cta-content{position:relative;color:#fff;padding:30px}
+/* Product page */
+.vx-p-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:20px}
+.vx-p-gallery img{width:100%;border-radius:12px;border:1px solid var(--border)}
+.vx-p-thumbs{display:flex;gap:8px;margin-top:8px}
+.vx-p-thumbs img{width:70px;height:70px;object-fit:cover;border-radius:8px;border:1px solid var(--border)}
+.vx-p-price{font-size:24px;color:var(--primary);margin:8px 0}
+.vx-p-actions{display:flex;gap:10px;margin:10px 0}
+.vx-p-icons{display:flex;gap:14px;list-style:none;padding:0;margin:10px 0;color:var(--muted)}
+/* Tabs */
+.vx-tabs{margin-top:16px}
+.vx-tabs input{display:none}
+.vx-tabs label{margin-inline-end:6px;border:1px solid var(--border);padding:8px 12px;border-radius:10px;cursor:pointer}
+.vx-tab-content{border:1px solid var(--border);border-radius:12px;padding:12px;margin-top:10px}
+/* Cart */
+.vx-cart h1{margin:18px 0}
+.vx-cart-table{display:grid;gap:12px}
+.vx-cart-row{display:flex;gap:10px;align-items:center;border:1px solid var(--border);border-radius:12px;padding:10px;background:var(--card)}
+.vx-cart-row img{width:72px;height:72px;object-fit:cover;border-radius:10px}
+.vx-cart-summary{display:flex;gap:10px;align-items:center;justify-content:flex-end;margin-top:16px}
+/* Footer */
+.vx-footer-top{padding:24px 0;display:grid;grid-template-columns:1.2fr 1.6fr .9fr;gap:16px}
+.vx-footer-logo{height:40px;margin-bottom:10px}
+.vx-footer-cols{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.vx-footer-col h4{margin:0 0 10px}
+.vx-payments{display:flex;flex-wrap:wrap;gap:8px}
+.vx-payments img{height:28px;background:#fff;border-radius:6px;padding:4px;border:1px solid var(--border)}
+.vx-footer-bottom{border-top:1px solid var(--border);padding:12px 16px;opacity:.8;text-align:center}
+.vx-wa-float{position:fixed;bottom:18px;left:18px;background:#25D366;color:#fff;width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 10px 20px rgba(0,0,0,.18)}
+/* Responsive */
+@media (max-width: 960px){
+  .vx-header-inner{grid-template-columns:1fr;gap:8px}
+  .vx-center{order:3}
+  .vx-nav ul{flex-wrap:wrap}
+  .vx-p-grid{grid-template-columns:1fr}
+  .vx-p-grid .vx-p-card img{height:180px}
+  .vx-badges-grid,.vx-t-grid{grid-template-columns:1fr}
+  .vx-footer-top{grid-template-columns:1fr}
+  .vx-p-grid{grid-template-columns:1fr}
+}

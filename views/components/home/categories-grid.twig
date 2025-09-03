@@ -1,0 +1,12 @@
+
+<section class="vx-cat-grid container">
+  <h2 class="vx-section-title">{{ component.fields.title.value }}</h2>
+  <div class="vx-grid">
+    {% for category in categories %}
+      <a class="vx-card" href="{{ category.url }}">
+        <img src="{{ category.image }}" alt="{{ category.name }}">
+        <span>{{ category.name }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</section>

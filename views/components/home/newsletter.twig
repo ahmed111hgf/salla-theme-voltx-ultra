@@ -1,0 +1,13 @@
+
+<section class="vx-newsletter">
+  <div class="container vx-newsletter-inner">
+    <div>
+      <h3>{{ component.fields.title.value }}</h3>
+      <p>{{ component.fields.subtitle.value }}</p>
+    </div>
+    <form action="/apps/newsletter/subscribe" method="post" class="vx-newsletter-form">
+      <input type="email" name="email" placeholder="ادخل بريدك الإلكتروني" required>
+      <button class="vx-btn">اشترك</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,9 @@
+
+<section class="container vx-brands">
+  <h2 class="vx-section-title">{{ component.fields.title.value }}</h2>
+  <div class="vx-slider brands" data-volt="slider">
+    {% for brand in brands %}
+      <a class="vx-brand" href="{{ brand.url }}"><img src="{{ brand.logo }}" alt="{{ brand.name }}"></a>
+    {% endfor %}
+  </div>
+</section>

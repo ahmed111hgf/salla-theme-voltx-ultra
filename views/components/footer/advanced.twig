@@ -1,0 +1,37 @@
+
+<footer class="vx-footer">
+  <div class="vx-footer-top container">
+    <div class="vx-about">
+      {% if settings.footer_logo.value %}
+        <img class="vx-footer-logo" src="{{ settings.footer_logo.value }}" alt="{{ store.name }}">
+      {% else %}<strong>{{ store.name }}</strong>{% endif %}
+      <p>متجر إلكترونيات بمعايير عالية وخدمة سريعة.</p>
+      <div class="vx-social">
+        {% if settings.support_whatsapp.value %}
+          <a class="vx-social-link" href="https://wa.me/{{ settings.support_whatsapp.value }}" target="_blank">WhatsApp</a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="vx-footer-cols">
+      {% for col in component.fields.columns %}
+        <div class="vx-footer-col">
+          <h4>{{ col.title }}</h4>
+          <ul>
+            {% for l in col.links %}<li><a href="{{ l.link }}">{{ l.label }}</a></li>{% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="vx-payments">
+      <img src="/assets/images/payments/visa.svg" alt="Visa">
+      <img src="/assets/images/payments/mastercard.svg" alt="Mastercard">
+      <img src="/assets/images/payments/mada.svg" alt="Mada">
+    </div>
+  </div>
+  <div class="vx-footer-bottom">
+    <small>{{ settings.copyright_text.value }}</small>
+  </div>
+  {% if settings.enable_whatsapp_fab.value and settings.support_whatsapp.value %}
+    <a class="vx-wa-float" href="https://wa.me/{{ settings.support_whatsapp.value }}" aria-label="WhatsApp">💬</a>
+  {% endif %}
+</footer>

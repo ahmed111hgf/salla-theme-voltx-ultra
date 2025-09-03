@@ -1,0 +1,12 @@
+
+<section class="vx-testimonials container">
+  <h2 class="vx-section-title">آراء العملاء</h2>
+  <div class="vx-t-grid">
+    {% for t in component.fields.items %}
+      <div class="vx-t-card">
+        <p>"{{ t.text }}"</p>
+        <strong>— {{ t.name }}</strong>
+      </div>
+    {% endfor %}
+  </div>
+</section>

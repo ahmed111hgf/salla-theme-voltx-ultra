@@ -1,0 +1,15 @@
+
+<section class="container vx-products">
+  <div class="vx-sec-head"><h2>{{ component.fields.section_title.value }}</h2></div>
+  <div class="vx-p-grid">
+    {% for product in products.featured %}
+      <a class="vx-p-card" href="{{ product.url }}">
+        <img src="{{ product.image }}" alt="{{ product.name }}">
+        <div class="vx-p-info">
+          <h3>{{ product.name }}</h3>
+          <div class="vx-price">{{ product.price_formatted }}</div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>

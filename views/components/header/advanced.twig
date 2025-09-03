@@ -1,0 +1,32 @@
+
+<header class="vx-header{% if settings.sticky_header.value %} is-sticky{% endif %}" style="background: {{ settings.bg_color.value }};">
+  {% include "components/header/topbar.twig" %}
+  <div class="vx-header-inner container">
+    <div class="vx-left">
+      <button class="vx-menu-toggle" aria-label="القائمة">☰</button>
+      <a class="vx-logo" href="/">
+        {% if settings.header_logo.value %}
+          <img src="{{ settings.header_logo.value }}" alt="{{ store.name }}">
+        {% else %}<strong>{{ store.name }}</strong>{% endif %}
+      </a>
+    </div>
+    <div class="vx-center">
+      <form class="vx-search" action="/search">
+        <input type="text" name="q" placeholder="ابحث عن منتج...">
+        <button type="submit">بحث</button>
+      </form>
+    </div>
+    <div class="vx-actions">
+      {% if component.fields.show_account.value %}<a class="vx-icon" href="/account" aria-label="الحساب">👤</a>{% endif %}
+      {% if component.fields.show_cart.value %}<a class="vx-icon" href="/cart" aria-label="السلة">🛒</a>{% endif %}
+      <button class="vx-icon" data-volt="toggle-theme" aria-label="الوضع الليلي">🌓</button>
+    </div>
+  </div>
+  <nav class="vx-nav container">
+    <ul>
+      {% for item in component.fields.menu %}
+        <li><a href="{{ item.link }}">{{ item.label }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

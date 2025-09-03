@@ -1,0 +1,26 @@
+
+{% include "components/header/advanced.twig" %}
+<section class="container vx-cart">
+  <h1>سلة المشتريات</h1>
+  {% if cart.items|length == 0 %}
+    <p>سلتك فارغة.</p>
+  {% else %}
+    <div class="vx-cart-table">
+      {% for item in cart.items %}
+        <div class="vx-cart-row">
+          <img src="{{ item.image }}" alt="{{ item.title }}">
+          <div class="vx-cart-info">
+            <strong>{{ item.title }}</strong>
+            <span>{{ item.quantity }} × {{ item.price_formatted }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="vx-cart-summary">
+      <span>الإجمالي:</span>
+      <strong>{{ cart.total_formatted }}</strong>
+      <a class="vx-btn" href="/checkout">إتمام الطلب</a>
+    </div>
+  {% endif %}
+</section>
+{% include "components/footer/advanced.twig" %}

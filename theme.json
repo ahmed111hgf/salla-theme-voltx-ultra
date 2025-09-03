@@ -1,0 +1,477 @@
+{
+  "version": "3.0.0",
+  "theme_name": "VoltX Ultra",
+  "repo_url": "https://example.com/voltx-ultra",
+  "support_url": "mailto:support@voltx.com",
+  "rtl": true,
+  "description": "ثيم إلكترونيات احترافي بواجهة حديثة ومكونات غنية وسرعة عالية.",
+  "settings": [
+    {
+      "type": "color",
+      "label": "اللون الأساسي",
+      "id": "brand_primary",
+      "format": "color",
+      "value": "#0ea5e9"
+    },
+    {
+      "type": "color",
+      "label": "اللون الثانوي",
+      "id": "brand_secondary",
+      "format": "color",
+      "value": "#22d3ee"
+    },
+    {
+      "type": "color",
+      "label": "لون الخلفية",
+      "id": "bg_color",
+      "format": "color",
+      "value": "#ffffff"
+    },
+    {
+      "type": "boolean",
+      "label": "تفعيل الوضع الداكن",
+      "id": "enable_dark_mode",
+      "format": "switch",
+      "value": true
+    },
+    {
+      "type": "string",
+      "label": "شعار الهيدر",
+      "id": "header_logo",
+      "format": "image",
+      "value": ""
+    },
+    {
+      "type": "string",
+      "label": "شعار الفوتر",
+      "id": "footer_logo",
+      "format": "image",
+      "value": ""
+    },
+    {
+      "type": "boolean",
+      "label": "هيدر لاصق (Sticky)",
+      "id": "sticky_header",
+      "format": "switch",
+      "value": true
+    },
+    {
+      "type": "string",
+      "label": "رقم واتساب",
+      "id": "support_whatsapp",
+      "format": "text",
+      "value": ""
+    },
+    {
+      "type": "boolean",
+      "label": "زر واتساب عائم",
+      "id": "enable_whatsapp_fab",
+      "format": "switch",
+      "value": true
+    },
+    {
+      "type": "string",
+      "label": "نص الشريط العلوي",
+      "id": "topbar_text",
+      "format": "text",
+      "value": "شحن سريع خلال 24-48 ساعة • استرجاع مجاني خلال 7 أيام"
+    },
+    {
+      "type": "string",
+      "label": "العرض الحالي (Topbar)",
+      "id": "topbar_promo_link",
+      "format": "url",
+      "value": "/collections/deals"
+    },
+    {
+      "type": "string",
+      "label": "صورة بانر 1",
+      "id": "hero1_image",
+      "format": "image",
+      "value": ""
+    },
+    {
+      "type": "string",
+      "label": "عنوان بانر 1",
+      "id": "hero1_title",
+      "format": "text",
+      "value": "أطلق طاقتك مع VoltX Ultra"
+    },
+    {
+      "type": "string",
+      "label": "نص بانر 1",
+      "id": "hero1_subtitle",
+      "format": "text",
+      "value": "أقوى عروض الإلكترونيات الذكية"
+    },
+    {
+      "type": "string",
+      "label": "زر بانر 1 - نص",
+      "id": "hero1_cta_text",
+      "format": "text",
+      "value": "تسوق الآن"
+    },
+    {
+      "type": "string",
+      "label": "زر بانر 1 - رابط",
+      "id": "hero1_cta_link",
+      "format": "url",
+      "value": "/collections/new"
+    },
+    {
+      "type": "string",
+      "label": "صورة بانر 2",
+      "id": "hero2_image",
+      "format": "image",
+      "value": ""
+    },
+    {
+      "type": "string",
+      "label": "عنوان بانر 2",
+      "id": "hero2_title",
+      "format": "text",
+      "value": "ملحقات أصلية 100%"
+    },
+    {
+      "type": "string",
+      "label": "نص بانر 2",
+      "id": "hero2_subtitle",
+      "format": "text",
+      "value": "شواحن وسماعات وكفرات"
+    },
+    {
+      "type": "string",
+      "label": "زر بانر 2 - نص",
+      "id": "hero2_cta_text",
+      "format": "text",
+      "value": "اكتشف الآن"
+    },
+    {
+      "type": "string",
+      "label": "زر بانر 2 - رابط",
+      "id": "hero2_cta_link",
+      "format": "url",
+      "value": "/collections/accessories"
+    },
+    {
+      "type": "string",
+      "label": "نص حقوق النشر",
+      "id": "copyright_text",
+      "format": "text",
+      "value": "© {{ store.name }} جميع الحقوق محفوظة"
+    }
+  ],
+  "features": [
+    "component-header-advanced",
+    "component-hero-slider",
+    "component-categories-grid",
+    "component-featured-products",
+    "component-products-slider",
+    "component-brands-carousel",
+    "component-badges",
+    "component-testimonials",
+    "component-newsletter",
+    "component-cta-banner",
+    "component-footer-advanced"
+  ],
+  "components": [
+    {
+      "name": "header-advanced",
+      "title": "رأس الصفحة المتقدم",
+      "icon": "sicon-layout",
+      "path": "header.advanced",
+      "fields": [
+        {
+          "id": "show_search",
+          "type": "boolean",
+          "label": "إظهار البحث",
+          "format": "switch",
+          "value": true
+        },
+        {
+          "id": "show_account",
+          "type": "boolean",
+          "label": "إظهار الحساب",
+          "format": "switch",
+          "value": true
+        },
+        {
+          "id": "show_cart",
+          "type": "boolean",
+          "label": "إظهار السلة",
+          "format": "switch",
+          "value": true
+        },
+        {
+          "id": "menu",
+          "type": "collection",
+          "format": "collection",
+          "minLength": 3,
+          "maxLength": 8,
+          "fields": [
+            {
+              "id": "label",
+              "type": "string",
+              "label": "النص",
+              "format": "text"
+            },
+            {
+              "id": "link",
+              "type": "string",
+              "label": "الرابط",
+              "format": "url"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hero-slider",
+      "title": "سلايدر البانرات",
+      "icon": "sicon-image",
+      "path": "home.hero-slider",
+      "fields": [
+        {
+          "id": "autoplay",
+          "type": "boolean",
+          "label": "تشغيل تلقائي",
+          "format": "switch",
+          "value": true
+        },
+        {
+          "id": "interval",
+          "type": "string",
+          "label": "زمن التبديل (ms)",
+          "format": "text",
+          "value": "5000"
+        }
+      ]
+    },
+    {
+      "name": "categories-grid",
+      "title": "شبكة التصنيفات",
+      "icon": "sicon-grid",
+      "path": "home.categories-grid",
+      "fields": [
+        {
+          "id": "title",
+          "type": "string",
+          "label": "العنوان",
+          "format": "text",
+          "value": "تسوق حسب الفئة"
+        }
+      ]
+    },
+    {
+      "name": "featured-products",
+      "title": "منتجات مختارة",
+      "icon": "sicon-star",
+      "path": "home.featured-products",
+      "fields": [
+        {
+          "id": "section_title",
+          "type": "string",
+          "label": "العنوان",
+          "format": "text",
+          "value": "منتجات مختارة"
+        }
+      ]
+    },
+    {
+      "name": "products-slider",
+      "title": "سلايدر منتجات",
+      "icon": "sicon-sliders",
+      "path": "home.products-slider",
+      "fields": [
+        {
+          "id": "section_title",
+          "type": "string",
+          "label": "العنوان",
+          "format": "text",
+          "value": "الأكثر مبيعًا"
+        }
+      ]
+    },
+    {
+      "name": "brands-carousel",
+      "title": "شريط البراندات",
+      "icon": "sicon-aperture",
+      "path": "home.brands-carousel",
+      "fields": [
+        {
+          "id": "title",
+          "type": "string",
+          "label": "العنوان",
+          "format": "text",
+          "value": "تسوق حسب الماركة"
+        }
+      ]
+    },
+    {
+      "name": "badges",
+      "title": "شعارات الثقة",
+      "icon": "sicon-shield-check",
+      "path": "home.badges",
+      "fields": [
+        {
+          "id": "items",
+          "type": "collection",
+          "format": "collection",
+          "minLength": 3,
+          "maxLength": 4,
+          "fields": [
+            {
+              "id": "icon",
+              "type": "string",
+              "label": "أيقونة",
+              "format": "icon"
+            },
+            {
+              "id": "title",
+              "type": "string",
+              "label": "العنوان",
+              "format": "text"
+            },
+            {
+              "id": "subtitle",
+              "type": "string",
+              "label": "وصف مختصر",
+              "format": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "testimonials",
+      "title": "آراء العملاء",
+      "icon": "sicon-message-square",
+      "path": "home.testimonials",
+      "fields": [
+        {
+          "id": "items",
+          "type": "collection",
+          "format": "collection",
+          "minLength": 3,
+          "maxLength": 6,
+          "fields": [
+            {
+              "id": "name",
+              "type": "string",
+              "label": "الاسم",
+              "format": "text"
+            },
+            {
+              "id": "text",
+              "type": "string",
+              "label": "التقييم",
+              "format": "text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "newsletter",
+      "title": "نموذج اشتراك",
+      "icon": "sicon-mail",
+      "path": "home.newsletter",
+      "fields": [
+        {
+          "id": "title",
+          "type": "string",
+          "label": "العنوان",
+          "format": "text",
+          "value": "انضم إلى نشرتنا"
+        },
+        {
+          "id": "subtitle",
+          "type": "string",
+          "label": "وصف",
+          "format": "text",
+          "value": "احصل على عروض حصرية وتحديثات أسبوعية"
+        }
+      ]
+    },
+    {
+      "name": "cta-banner",
+      "title": "بانر دعائي عريض",
+      "icon": "sicon-bolt",
+      "path": "home.cta-banner",
+      "fields": [
+        {
+          "id": "title",
+          "type": "string",
+          "label": "العنوان",
+          "format": "text",
+          "value": "خصم يصل إلى 40%"
+        },
+        {
+          "id": "subtitle",
+          "type": "string",
+          "label": "وصف",
+          "format": "text",
+          "value": "على مختارات مختارة لفترة محدودة"
+        },
+        {
+          "id": "link",
+          "type": "string",
+          "label": "رابط الزر",
+          "format": "url",
+          "value": "/collections/deals"
+        },
+        {
+          "id": "image",
+          "type": "string",
+          "label": "صورة",
+          "format": "image",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "name": "footer-advanced",
+      "title": "تذييل متقدم",
+      "icon": "sicon-columns",
+      "path": "footer.advanced",
+      "fields": [
+        {
+          "id": "columns",
+          "type": "collection",
+          "format": "collection",
+          "minLength": 3,
+          "maxLength": 4,
+          "fields": [
+            {
+              "id": "title",
+              "type": "string",
+              "label": "عنوان القسم",
+              "format": "text"
+            },
+            {
+              "id": "links",
+              "type": "collection",
+              "format": "collection",
+              "minLength": 3,
+              "maxLength": 8,
+              "fields": [
+                {
+                  "id": "label",
+                  "type": "string",
+                  "label": "النص",
+                  "format": "text"
+                },
+                {
+                  "id": "link",
+                  "type": "string",
+                  "label": "الرابط",
+                  "format": "url"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

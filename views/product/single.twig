@@ -1,0 +1,60 @@
+
+{% include "components/header/advanced.twig" %}
+<section class="container vx-product">
+  <div class="vx-p-grid">
+    <div class="vx-p-gallery">
+      <div class="vx-p-main">
+        <img src="{{ product.image }}" alt="{{ product.name }}">
+      </div>
+      <div class="vx-p-thumbs">
+        {% for img in product.images %}
+          <img src="{{ img }}" alt="{{ product.name }} thumbnail">
+        {% endfor %}
+      </div>
+    </div>
+    <div class="vx-p-info">
+      <h1>{{ product.name }}</h1>
+      <div class="vx-p-price">{{ product.price_formatted }}</div>
+      <div class="vx-p-meta">
+        <span class="vx-sku">SKU: {{ product.sku }}</span>
+      </div>
+      <form action="/cart/add" method="post" class="vx-p-actions">
+        <input type="hidden" name="product_id" value="{{ product.id }}"/>
+        <button class="vx-btn">أضف إلى السلة</button>
+      </form>
+      <ul class="vx-p-icons">
+        <li>🚚 شحن سريع</li>
+        <li>🛡️ ضمان أصلي</li>
+        <li>💳 دفع آمن</li>
+      </ul>
+      <div class="vx-tabs">
+        <input type="radio" id="tab1" name="tabs" checked>
+        <label for="tab1">الوصف</label>
+        <input type="radio" id="tab2" name="tabs">
+        <label for="tab2">المواصفات</label>
+        <input type="radio" id="tab3" name="tabs">
+        <label for="tab3">التقييمات</label>
+        <div class="vx-tab-content">
+          <div class="vx-tab-pane">{{ product.description }}</div>
+          <div class="vx-tab-pane"><pre>{{ product.specs }}</pre></div>
+          <div class="vx-tab-pane">لا توجد تقييمات بعد.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container">
+  <h2 class="vx-section-title">منتجات مشابهة</h2>
+  <div class="vx-p-grid">
+    {% for p in products.related %}
+      <a class="vx-p-card" href="{{ p.url }}">
+        <img src="{{ p.image }}" alt="{{ p.name }}">
+        <div class="vx-p-info">
+          <h3>{{ p.name }}</h3>
+          <div class="vx-price">{{ p.price_formatted }}</div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% include "components/footer/advanced.twig" %}
